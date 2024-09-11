@@ -48,7 +48,6 @@
             display: none;
         }
 
-        /* Estilizando o input de data */
         input[type="date"] {
             padding: 10px;
             font-size: 1.2rem;
@@ -63,7 +62,7 @@
             border-color: #45a049;
             background-color: #e0f7fa;
             outline: none;
-            box-shadow: 0 0 10px rgba(0, 150, 136, 0.5); /* Efeito de brilho ao focar */
+            box-shadow: 0 0 10px rgba(0, 150, 136, 0.5);
         }
 
         #sendWhatsapp {
@@ -81,6 +80,26 @@
         #sendWhatsapp:hover {
             background-color: #45a049;
             transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            input[type="date"] {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+
+            #sendWhatsapp {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -123,7 +142,7 @@
         sendWhatsapp.addEventListener('click', () => {
             const date = dateInput.value;
             if (date) {
-                const whatsappNumber = "5588993210216"; // Substitua pelo número de WhatsApp
+                const whatsappNumber = "5588993210216"; // Substitua pelo seu número
                 const message = `Oi! Eu aceito sair com você. Que tal no dia ${date}? 😊`;
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
                 window.open(whatsappURL, '_blank');

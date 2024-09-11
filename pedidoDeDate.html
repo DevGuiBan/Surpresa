@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer sair comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #yesButton {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #noButton {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+
+        #datePicker {
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Estilizando o input de data */
+        input[type="date"] {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            background-color: #f0f8ff;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        input[type="date"]:focus {
+            border-color: #45a049;
+            background-color: #e0f7fa;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 150, 136, 0.5); /* Efeito de brilho ao focar */
+        }
+
+        #sendWhatsapp {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #sendWhatsapp:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quer sair comigo?</h1>
+        <div class="buttons">
+            <button id="yesButton">Sim</button>
+            <button id="noButton">Não</button>
+        </div>
+        <div id="datePicker">
+            <h2>Escolha uma data para nosso encontro:</h2>
+            <input type="date" id="dateInput">
+            <br><br>
+            <button id="sendWhatsapp">Enviar no WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+        const datePicker = document.getElementById('datePicker');
+        const sendWhatsapp = document.getElementById('sendWhatsapp');
+        const dateInput = document.getElementById('dateInput');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener('click', () => {
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';
+            datePicker.style.display = 'block';
+        });
+
+        sendWhatsapp.addEventListener('click', () => {
+            const date = dateInput.value;
+            if (date) {
+                const whatsappNumber = "5588993210216"; // Substitua pelo número de WhatsApp
+                const message = `Oi! Eu aceito sair com você. Que tal no dia ${date}? 😊`;
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank');
+            } else {
+                alert('Por favor, selecione uma data.');
+            }
+        });
+    </script>
+</body>
+</html>

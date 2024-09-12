@@ -179,17 +179,10 @@
             <br><br>
             <button id="sendWhatsapp">Enviar no WhatsApp</button>
 
-<<<<<<< HEAD
             <h2>Não tem como negar meu date.<br>❤️ Obrigado por aceitar ❤️</h2>
             <div id="videoContainer" class="video-wrapper">
                 <iframe id="videoPlayer" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
             </div>
-=======
-            <div id="videoContainer"></div>
-            <h2>Não tem como negar meu pedido.<br>❤️ Obrigado por aceitar ❤️</h2>
-            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-        </div>
->>>>>>> 68e29157a5fe7e81df913f97d492fbe859c69152
         </div>
     </div>
 
@@ -241,14 +234,14 @@
             today.setHours(0, 0, 0, 0);
 
             if (date < today) {
-                showCustomAlert('A data escolhida é no passado?! 🤨');
+                showCustomAlert('A data é no passado?! 🤨');
                 return;
             }
 
             if (dateInput.value) {
-                const whatsappNumber = "5588993210216"; // Substitua pelo seu número
+                const whatsappNumber = "5588993210216"; // Teu número
                 const message = `Oi! Eu aceito sair com você. Que tal no dia ${dateInput.value}? 😊`;
-                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`; //Pode trocar o app tbm, a vontade.
                 window.open(whatsappURL, '_blank');
             } else {
                 showCustomAlert('E a data? 🤨');

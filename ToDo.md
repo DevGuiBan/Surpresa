@@ -36,12 +36,11 @@ Criar uma aplicação que gerencie o aluguel de veículos, onde cada item abaixo
 > - [ ] RN7: Regras de devolução: 
 >    - Caso pessoa fisica tenha ficado com o carro mais que 5 dias terá direito a 5% de desconto. 
 >    - Caso pessoa juridica tenha ficado com o carro mais que 3 dias terá direito a 10% de desconto.
-  
-Valores base da diária por tipo de veículo:
 
 > [!NOTE]
+> ### Valores-base da diária por tipo de veículo
 > 
-> Tipo de Veículo Valor por dia
+> *Tipo de Veículo Valor por dia:*
 > _____________________
 >  Moto R$ 100,00
 > _____________________
@@ -49,7 +48,8 @@ Valores base da diária por tipo de veículo:
 > _____________________
 >  Caminhão R$ 200,0
 
-## Entregaveis
+
+# Entregaveis
 
 - O projeto deverá ser em grupo de 5 pessoas;
 - O projeto deverá ser entregue no github;

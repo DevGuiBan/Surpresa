@@ -1,12 +1,12 @@
 # Pedido de Date diferenciado ❤️
 
-## Funcionalidade
+## Funcionalidade:
 
 Esse código propõe uma maneira diferente de chamar seu/sua pretentende para um encontro, com uma pequena brincadeira com o botão de **NÃO**, escolha de data e um vídeo de comemoração que também pode ser alterado.
 
-## Visualização
+## Acesse aqui para vizualizar e testar:
 
-
+https://devguiban.github.io/Surpresa/
 
 ## Como usar:
 

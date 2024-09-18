@@ -1,4 +1,4 @@
-# Pedido de Date diferenciado ❤️
+# Pedido de encontro diferenciado ❤️
 
 ## Funcionalidade:
 
